@@ -27,6 +27,10 @@ router.route("/users")
         var db = new mongoOp();
         var response = {};
         db.userEmail = req.body.email;
+        db.userAddress = req.body.address;
+        db.userPhone = req.body.phone;
+        db.userFirstName = req.body.firstname;
+        db.userLastName = req.body.lastname;
         db.userPassword = require('crypto').createHash('sha1').update(req.body.password).digest('base64');
         db.save(function(err){
             if(err) {
