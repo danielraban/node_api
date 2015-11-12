@@ -87,7 +87,7 @@ router.route("/users/:id")
                     if(err) {
                         response = {"error" : true,"message" : "Error deleting data"};
                     } else {
-                        response = {"error" : true,"message" : "Data associated with "+req.params.id+"is deleted"};
+                        response = {"error" : true,"message" : "Data associated with user: "+req.params.id+" has been deleted"};
                     }
                     res.json(response);
                 });
